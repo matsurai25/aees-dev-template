@@ -1,0 +1,2 @@
+# aees-dev-template
+AfterEffectsScriptingのためのNodeプロジェクトテンプレート
