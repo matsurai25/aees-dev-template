@@ -21,7 +21,7 @@ gulp.task('clean', (cb) => {
 
 gulp.task('build', () => {
   browserify({
-    entries: ['./src/index.js']
+    entries: ['./lib/entry.js']
   })
   .transform("require-globify")
   .transform("babelify", {presets: ["es2015"]})
@@ -39,6 +39,6 @@ gulp.task('watch', () => {
   gulp.watch(['src/**/*.js','lib/**/*.js'], ['build']);
 });
 
-gulp.task('init', () => {
-  exec(`osascript -e 'tell application "Adobe After Effects CC 2014" to DoScriptFile "${DISTFILE}"'`);
-});
+// gulp.task('init', () => {
+//   exec(`osascript -e 'tell application "Adobe After Effects CC 2014" to DoScriptFile "${DISTFILE}"'`);
+// });
